@@ -32,7 +32,7 @@ const Speech = () => {
           transcript.includes("whatsapp") ||
           transcript.includes("whatsapp open")
         ) {
-          window.open("https://www.whatsapp.com/", "_blank");
+          window.open("https://web.whatsapp.com/", "_blank");
         }
         if (
           transcript.includes("map") ||
@@ -145,6 +145,12 @@ const Speech = () => {
           transcript.includes("wikipedia open")
         ) {
           window.open("https://www.wikipedia.org/", "_blank");
+        }
+        if (
+          transcript.includes("youtube") ||
+          transcript.includes("youtube open")
+        ) {
+          window.open("https://www.youtube.com/", "_blank");
         }
       };
 
