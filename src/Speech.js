@@ -1,12 +1,11 @@
 import React from "react";
-import { CiMicrophoneOn } from "react-icons/ci";
 import { useState } from "react";
 
 const Speech = () => {
   const [listen, setlisten] = useState(false);
   const [responce, setResponce] = useState("");
 
-  async function hai(params) {
+  async function hai() {
     try {
       let rego = await new window.webkitSpeechRecognition();
       if (!rego) {
@@ -22,7 +21,7 @@ const Speech = () => {
 
       rego.onresult = (event) => {
         const transcript = event.results[0][0].transcript.toLowerCase();
-        console.log(transcript.toLowerCase())
+        console.log(transcript.toLowerCase());
         if (
           transcript.includes("facebook") ||
           transcript.includes("facebook open")
@@ -71,10 +70,7 @@ const Speech = () => {
         ) {
           window.open("https://twitter.com/login", "_blank");
         }
-        if (
-          transcript.includes("github") ||
-          transcript.includes("get up")
-        ) {
+        if (transcript.includes("github") || transcript.includes("get up")) {
           window.open("https://github.com/", "_blank");
         }
         if (
@@ -91,7 +87,8 @@ const Speech = () => {
         }
         if (
           transcript.includes("4 gpt") ||
-          transcript.includes("open ai") || transcript.includes("4 gpt")
+          transcript.includes("open ai") ||
+          transcript.includes("4 gpt")
         ) {
           window.open("https://chat.openai.com/", "_blank");
         }
@@ -161,7 +158,15 @@ const Speech = () => {
 
   return (
     <div className="container outer">
-      <CiMicrophoneOn onClick={() => hai()} size={200} className="mic-icon" />
+      <div className="container images">
+        <img
+          src="https://i.pinimg.com/564x/4f/91/43/4f91436deaec33a3404db3da81e528a4.jpg"
+          className="img-fluid image"
+          onClick={() => hai()}
+          width="300"
+          height="200"
+        />
+      </div>
     </div>
   );
 };
