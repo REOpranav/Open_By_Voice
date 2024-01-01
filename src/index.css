@@ -8,7 +8,18 @@
 .image {
     max-width: 100%;  
     max-height: 100%;  
-    cursor: pointer;
-  }
+     cursor: pointer;
+     margin-top: -100px;
+}
 
- 
+.image:hover{
+   border: 1px solid black;
+   box-shadow: 1px 1px 10px black;
+}
+
+.para{
+   text-transform: uppercase;
+   text-align: center;
+   margin-top: 10px;
+   letter-spacing: 1px ;
+}

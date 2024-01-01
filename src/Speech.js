@@ -158,6 +158,7 @@ const Speech = () => {
 
   return (
     <div className="container outer">
+       <p className="lead para">tap this red button and speak</p>
       <div className="container images">
         <img
           src="https://i.pinimg.com/564x/4f/91/43/4f91436deaec33a3404db3da81e528a4.jpg"
